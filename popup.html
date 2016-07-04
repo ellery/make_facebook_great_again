@@ -35,15 +35,14 @@
       <h4 class="title">Make Facebook Great Again</h4>
       <p>Filtered words (Click to remove)</p>
       <p id="tic-tag-cloud"></p>
-      
       <div id='add_keyword'>
         Add a Keyword:
         <input type='text' id='add_keyword_text'></input>
         <input type='button' id='add_keyword_button' value='Add'>
         <div id='error'></div>
       </div>
+      <div id='footer'><a href='https://github.com/ellery/make_facebook_great_again' target="_blank">Plugin Website</a></div>
     </div>
-  
     <style>
     .title{
      text-align: center; 
@@ -53,6 +52,7 @@
     #popup_body{
       width: 250px;
       height: 400px;
+      position: relative;
     
     }
     
@@ -60,7 +60,10 @@
       text-color: red;
       
     }
-  
+    #footer{
+      position: absolute; 
+      bottom: 0;
+    }
     </style>
     <script src="popup.js"></script>      
     

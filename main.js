@@ -1,11 +1,5 @@
 var array_of_tics = ['trump','hillary']; // Sets default filter values
 
-
-
-
-
-
-
 function load() {
     chrome.storage.local.get('tics', function (result) {
         if(result.tics != undefined){
@@ -65,6 +59,7 @@ function add_tic_keyword(keyword){
 
 
 load()
+
 var app_name = "Make Facebook Great Again"
 var no_tic_id_counter = 0
 
@@ -89,6 +84,7 @@ function show_ticed_post(tracking_id){
 }
 
 function hide_tic() {
+  load() // refresh tag data
   // Facebook Trending
   jQuery.each(array_of_tics, function(index, value){
     jQuery("#pagelet_trending_tags_and_topics li").not(".no_tic").each(function(){
@@ -138,12 +134,10 @@ chrome.runtime.onMessage.addListener(
             case "removeKeyword":
                 remove_tic_keyword(message.keyword)
                 callback('ok');
-                load();
                 break;
             case "addKeyword":
                 add_tic_keyword(message.keyword)
                 callback('ok');
-                load();
                 break;
             default:
                 console.error("Unrecognised message: ", message);
