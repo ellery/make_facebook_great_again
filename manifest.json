@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Make Facebook Great Again",
+  "description": "This extension removes any mention, post and treading topic related to Trump or Hillary.",
+  "version": "1.1",
+  "permissions": [
+           "storage"
+         ],
+  "content_scripts": [
+     {
+       "matches": [ "http://facebook.com/*","http://*.facebook.com/*", "https://*.facebook.com/*", "https://facebook.com/*"],
+       "js": ["jquery-3.0.0.min.js","main.js"],
+       "css": ["no_tic.css"]
+       }],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
