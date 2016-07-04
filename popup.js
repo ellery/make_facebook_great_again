@@ -6,9 +6,9 @@ function refresh_local_storage(){
     var tags = ''
     if(result.tics != undefined){
       jQuery.each(result.tics,function(index, value){
-        tags += "<a class='remove-tag-click' href='#' data-keyword='"+value+"'>"+value+"</a>"
+        tags += "<a class='remove-tag-click' href='#' data-keyword='"+value+"' title='Remove "+value+"'>"+value+"</a>"
         if(index != result.tics.length -1){
-          tags += ", "
+          tags += " "
         }
           
       })

@@ -33,8 +33,8 @@
   <body>
     <div id="popup_body">
       <h4 class="title">Make Facebook Great Again</h4>
-      <p>Filtered words (Click to remove)</p>
-      <p id="tic-tag-cloud"></p>
+      <p id="filter_text">Filtered words (Click to remove)</p>
+      <div id="tic-tag-cloud"></div>
       <div id='add_keyword'>
         Add a Keyword:
         <input type='text' id='add_keyword_text'></input>
@@ -48,6 +48,31 @@
      text-align: center; 
     
     }
+    
+    #filter_text{
+      font-size: 12px;
+      text-align: center; 
+    }
+    
+    #tic-tag-cloud{
+      padding: 5px 10px 10px 5px;
+      
+    }
+    #tic-tag-cloud a{
+      background-color: lightblue;
+      padding: 3px 8px 3px 8px;
+      -webkit-border-radius: 10px;
+      border-style: none;
+      outline:0;
+      margin-bottom: 10px;
+      margin-left: 5px;
+      display: inline-block;
+      }
+    #tic-tag-cloud a:hover{
+      background-color: lightgrey;
+      padding: 3px 8px 3px 8px;
+      -webkit-border-radius: 10px;
+    }
   
     #popup_body{
       width: 250px;
@@ -60,7 +85,16 @@
       text-color: red;
       
     }
+    
+    #add_keyword{
+      position: absolute; 
+      bottom: 30px;
+      padding: 10px;
+      
+    }
+    
     #footer{
+      padding-right: 10px;
       position: absolute; 
       bottom: 0;
     }
